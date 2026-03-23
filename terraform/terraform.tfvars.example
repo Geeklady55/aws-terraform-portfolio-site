@@ -1,0 +1,4 @@
+aws_region   = "us-east-1"
+bucket_name  = "geeklady55-terraform-portfolio-2026-4421"
+project_name = "aws-terraform-portfolio-site"
+environment  = "dev"
