@@ -167,3 +167,9 @@ aiguru2002@gmail.com
 ## Why This Project Matters
 
 This project demonstrates real-world cloud engineering skills including infrastructure automation, deployment workflows, troubleshooting, and documentation practices used by cloud and DevOps engineers.
+
+## Deployment Guide
+
+See full deployment steps here:
+
+[Deployment Steps](docs/deployment-steps.md)
