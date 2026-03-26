@@ -1,10 +1,22 @@
 resource "aws_s3_bucket" "portfolio" {
   bucket = var.bucket_name
+}
 
-  tags = {
-    Name        = var.project_name
-    Environment = var.environment
-    ManagedBy   = "Terraform"
+resource "aws_s3_bucket_versioning" "portfolio" {
+  bucket = aws_s3_bucket.portfolio.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "portfolio" {
+  bucket = aws_s3_bucket.portfolio.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
   }
 }
 
